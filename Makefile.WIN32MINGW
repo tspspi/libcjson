@@ -1,0 +1,10 @@
+EXESUFFIX=.exe
+OBJSUFFIX=.o
+SLIBSUFFIX=.a
+DYNLIBSUFFIX=.dll
+
+CC=gcc -Wall -pedantic -ansi -std=c99
+CCLIB=gcc -Wall -pedantic -ansi -std=c99
+ARCMD=ar rcs
+SHAREDCC=gcc -Wall -shared
+MAKE=make

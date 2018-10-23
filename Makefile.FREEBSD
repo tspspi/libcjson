@@ -1,0 +1,10 @@
+EXESUFFIX=
+OBJSUFFIX=.o
+SLIBSUFFIX=.a
+DYNLIBSUFFIX=.so
+
+CC=clang -Wall -pedantic -ansi -std=c99 -lm
+CCLIB=clang -fPIC -Wall -pedantic -ansi -std=c99 -lm
+ARCMD=ar rcs
+SHAREDCC=clang -Wall -shared
+MAKE=gmake
