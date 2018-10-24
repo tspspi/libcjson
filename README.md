@@ -1,5 +1,18 @@
 # ANSI C99 JSON serializer / deserializer
 
+<ul>
+	<li> <a href="#user-content-jsonread">Reading JSON input</a> </li>
+	<li> <a href="#user-content-jsonwrite">Writing JSON output</a> </li>
+	<li> <a href="#user-content-jsonaccess">Traversing an JSON tree and accessing values</a> <ul>
+		<li> <a href="#user-content-jsonaccessarray">Accessing ordered lists (arrays)</a> </li>
+		<li> <a href="#user-content-jsonaccessobject">Accessing key-value stores (objects)</a> </li>
+		<li> <a href="#user-content-jsonaccessnumeric">Accessing numeric types</a> </li>
+		<li> <a href="#user-content-jsonaccessstring">Accessing strings</a> </li>
+		<li> <a href="#user-content-jsonaccessconst">Accessing constants</a> </li>
+	</ul> </li>
+	<li> <a href="#user-content-jsonuml">UML overview of the public API</a> </li>
+</ul>
+
 This is a small ANSI C99 library that provides an easy interface to deserialize
 arbitrary UTF-8 JSON input into an abstract tree as well as methods to
 traverse through the tree and to re-serialize such an internal representation
@@ -351,6 +364,6 @@ enum cjsonError cjsonBoolean_Set(
 );
 ```
 
-## UML overview of the public API
+## UML overview of the public API<a name="jsonuml">
 
 ![UML graphics of the public API](./doc/overview.svg)
