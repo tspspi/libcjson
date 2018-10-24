@@ -140,6 +140,14 @@ void cjsonReleaseValue(
 
 ### Accessing ordered lists (arrays)
 
+Arrays are implemented internally as linked list of ordered arrays (i.e. an
+Arraylist). They can be created empty, new items can then be pushed into the
+array via the `cjsonArray_Push` function until it has reached it's target size.
+
+One can fetch and replace elements in the range returned by `cjsonArray_Length`
+via the `cjsonArray_Get` and `cjsonArray_Set` functions which adress the
+elements via their index.
+
 ```
 enum cjsonError cjsonArray_Create(
 	struct cjsonValue**	lpArrayOut,
@@ -167,6 +175,13 @@ typedef enum cjsonError (*cjsonArray_Iterate_Callback)(
 	struct cjsonValue* lpValue,
 	void* lpFreeParam
 );
+```
+
+If one needs to iterate over all elements one can also use the iterator
+function. This methods calls an callback function of type
+`cjsonArray_Iterate_Callback` for every element in the array.
+
+```
 enum cjsonError cjsonArray_Iterate(
 	struct cjsonValue* lpValue,
 	cjsonArray_Iterate_Callback callback,
@@ -174,70 +189,121 @@ enum cjsonError cjsonArray_Iterate(
 );
 ```
 
+Iterator usage may look like the following sample:
+
+```
+static enum cjsonError jsonArrayIterator(
+	unsigned long int index,
+	struct cjsonValue* lpValue,
+	void* lpFreeParam
+) {
+	/*
+		Do whatever you want with lpValue.
+		
+		Do not modify the array during iteration!
+	*/
+
+    return cjsonE_Ok;
+}
+
+
+...
+    e = cjsonArray_Iterate(lpValue, &jsonArrayIterator, NULL);
+...
+```
+
 ### Accessing key-value stores (objects)
+
+Objects represent unordered key-value stores. They may (if the parser has
+been instructed to tolerate it) contain multiple values per key but normally
+when used in RFC conformant mode should provide a unique mapping between
+keys and values. Values can be any `cjsonValue` type, keys are always UTF-8
+strings. This library does not interpret the key strings in any way. Objects
+are implemented as hashmaps with a fixed number of buckets that can be
+tuned via the `CJSON_BLOCKSIZE_OBJECT` compile time definition. Note that since
+it's a hashtable the best case lookup speed is O(1) but the worst case in which
+all elements are hashed into the same bucket is O(n).
+
+To remove an element one can store `NULL` at its key.
+
+Access is mainly done via `cjsonObject_Set` and `cjsonObject_Get` functions.
+If one wants to check if a key is present one can use the `cjsonObject_HasKey`
+method.
 
 ```
 enum cjsonError cjsonObject_Create(
-	struct cjsonValue** lpOut,
-	struct cjsonSystemAPI* lpSystem
+    struct cjsonValue** lpOut,
+    struct cjsonSystemAPI* lpSystem
 );
 enum cjsonError cjsonObject_Set(
-	struct cjsonValue* lpObject,
-	const char* lpKey,
-	unsigned long int dwKeyLength,
-	struct cjsonValue* lpValue
+    struct cjsonValue* lpObject,
+    const char* lpKey,
+    unsigned long int dwKeyLength,
+    struct cjsonValue* lpValue
 );
 enum cjsonError cjsonObject_Get(
-	const struct cjsonValue* lpObject,
-	const char* lpKey,
-	unsigned long int dwKeyLength,
-	struct cjsonValue** lpValueOut
+    const struct cjsonValue* lpObject,
+    const char* lpKey,
+    unsigned long int dwKeyLength,
+    struct cjsonValue** lpValueOut
 );
 enum cjsonError cjsonObject_HasKey(
-	const struct cjsonValue* lpObject,
-	const char* lpKey,
-	unsigned long int dwKeyLength
+    const struct cjsonValue* lpObject,
+    const char* lpKey,
+    unsigned long int dwKeyLength
 );
+```
+
+As with arrays objects provide an easy way to iterate over all contained child
+objects - and iterator function. Note that the order in which the data is returned
+is arbitrary.
+
+```
 typedef enum cjsonError (*cjsonObject_Iterate_Callback)(
-	char* lpKey,
-	unsigned long int dwKeyLength,
-	struct cjsonValue* lpValue,
-	void* lpFreeParam
+    char* lpKey,
+    unsigned long int dwKeyLength,
+    struct cjsonValue* lpValue,
+    void* lpFreeParam
 );
 enum cjsonError cjsonObject_Iterate(
-	const struct cjsonValue* lpObject,
-	cjsonObject_Iterate_Callback callback,
-	void* callbackFreeParam
+    const struct cjsonValue* lpObject,
+    cjsonObject_Iterate_Callback callback,
+    void* callbackFreeParam
 );
 ```
 
 ### Accessing numeric types
 
+Numeric types are stored internally either as unsigned long, signed long
+or double precission floating point value. Getting the value as a different
+type (for example reading an double as unsigned long) leads to loss of
+precision and information but is possible.
+
 ```
 enum cjsonError cjsonNumber_Create(
-	struct cjsonValue** lpOut,
-	struct cjsonSystemAPI* lpSystem
+    struct cjsonValue** lpOut,
+    struct cjsonSystemAPI* lpSystem
 );
 unsigned long int cjsonObject_GetAsULong(
-	struct cjsonValue* lpValue
+    struct cjsonValue* lpValue
 );
 signed long int cjsonObject_GetAsSLong(
-	struct cjsonValue* lpValue
+    struct cjsonValue* lpValue
 );
 double cjsonObject_GetAsDouble(
-	struct cjsonValue* lpValue
+    struct cjsonValue* lpValue
 );
 enum cjsonError cjsonNumber_SetULong(
-	struct cjsonValue* lpValue,
-	unsigned long int value
+    struct cjsonValue* lpValue,
+    unsigned long int value
 );
 enum cjsonError cjsonNumber_SetSLong(
-	struct cjsonValue* lpValue,
-	signed long int value
+    struct cjsonValue* lpValue,
+    signed long int value
 );
 enum cjsonError cjsonNumber_SetDouble(
-	struct cjsonValue* lpValue,
-	double value
+    struct cjsonValue* lpValue,
+    double value
 );
 ```
 
@@ -245,36 +311,42 @@ enum cjsonError cjsonNumber_SetDouble(
 
 ```
 enum cjsonError cjsonString_Create(
-	struct cjsonValue** lpStringOut,
-	const char* lpData,
-	unsigned long int dwDataLength,
-	struct cjsonSystemAPI* lpSystem
+    struct cjsonValue** lpStringOut,
+    const char* lpData,
+    unsigned long int dwDataLength,
+    struct cjsonSystemAPI* lpSystem
 );
 char* cjsonString_Get(
-	struct cjsonValue* lpValue
+    struct cjsonValue* lpValue
 );
 unsigned long int cjsonString_Strlen(
-	struct cjsonValue* lpValue
+    struct cjsonValue* lpValue
 );
 ```
 
 ### Accessing constants
 
+Constants are simply the three allowed JSON constants
+`true`, `false` and `null`. The boolean constants can
+be modified via the `cjsonBoolean_Set` function which
+can convert a `cjsonTrue` type into `cjsonFalse` and
+vice versa.
+
 ```
 enum cjsonError cjsonTrue_Create(
-	struct cjsonValue** lpOut,
-	struct cjsonSystemAPI* lpSystem
+    struct cjsonValue** lpOut,
+    struct cjsonSystemAPI* lpSystem
 );
 enum cjsonError cjsonFalse_Create(
-	struct cjsonValue** lpOut,
-	struct cjsonSystemAPI* lpSystem
+    struct cjsonValue** lpOut,
+    struct cjsonSystemAPI* lpSystem
 );
 enum cjsonError cjsonNull_Create(
-	struct cjsonValue** lpOut,
-	struct cjsonSystemAPI* lpSystem
+    struct cjsonValue** lpOut,
+    struct cjsonSystemAPI* lpSystem
 );
 enum cjsonError cjsonBoolean_Set(
-	struct cjsonValue* lpValue,
-	int value
+    struct cjsonValue* lpValue,
+    int value
 );
 ```
