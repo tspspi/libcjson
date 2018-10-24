@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="124cm" height="63cm" viewBox="-461 -341 2465 1250" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g>
+    <rect style="fill: #ffffff" x="-140" y="40" width="579.8" height="44"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-140" y="40" width="579.8" height="44"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="149.9" y="55.2">&lt;&lt;struct&gt;&gt;</text>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="149.9" y="76">cjsonSystemAPI</text>
+    <rect style="fill: #ffffff" x="-140" y="84" width="579.8" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-140" y="84" width="579.8" height="8"/>
+    <rect style="fill: #ffffff" x="-140" y="92" width="579.8" height="52"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-140" y="92" width="579.8" height="52"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-137" y="105.2">+alloc(in lpSelf:struct cjsonSystemAPI*,</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-137" y="121.2">       in dwSize:unsigned long int,out lpDataOut:void**): enum cjsonError</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-137" y="137.2">+free(in lpSelf:struct cjsonSystemAPI*,in lpObject:void*): enum cjsonError</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="520" y="40" width="556.7" height="44"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="520" y="40" width="556.7" height="44"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="798.35" y="55.2">&lt;&lt;struct&gt;&gt;</text>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="798.35" y="76">cjsonValue</text>
+    <rect style="fill: #ffffff" x="520" y="84" width="556.7" height="36"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="520" y="84" width="556.7" height="36"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="523" y="97.2">-type: enum cjsonElementType</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="523" y="113.2">-lpSystem: struct cjsonSystemAPI*</text>
+    <rect style="fill: #ffffff" x="520" y="120" width="556.7" height="292"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="520" y="120" width="556.7" height="292"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="523" y="133.2"> cjsonIsNull(in x:const struct cjsonValue*): boolean</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="523" y="149.2"> cjsonIsTrue(in x:const struct cjsonValue*): boolean</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="523" y="165.2"> cjsonIsFalse(in x:const struct cjsonValue*): boolean</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="523" y="181.2"> cjsonIsNumeric(in x:const struct cjsonValue*): boolean</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="523" y="197.2"> cjsonIsULong(in x:const struct cjsonValue*): boolean</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="523" y="213.2"> cjsonIsSLong(in x:const struct cjsonValue*): boolean</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="523" y="229.2"> cjsonIsDouble(in x:const struct cjsonValue*): boolean</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="523" y="245.2"> cjsonIsString(in x:const struct cjsonValue*): boolean</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="523" y="261.2"> cjsonIsArray(in x:const struct cjsonValue*): boolean</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="523" y="277.2"> cjsonIsObject(in x:const struct cjsonValue*): boolean</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="523" y="293.2"> cjsonTrue_Create(out lpValue:struct cjsonValue**,</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="523" y="309.2">                  in lpSystem:struct cjsonSystemAPI*): enum cjsonError</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="523" y="325.2"> cjsonFalse_Create(out lpOut:struct cjsonValue**,</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="523" y="341.2">                   in lpSystem:struct cjsonSystemAPI*): enum cjsonError</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="523" y="357.2"> cjsonNull_Create(out lpOut:struct cjsonValue**,</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="523" y="373.2">                  in lpSystem:struct cjsonSystemAPI*): enum cjsonError</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="523" y="389.2"> cjsonBoolean_Set(in lpValue:struct cjsonValue*,</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="523" y="405.2">                  in value:int): enum cjsonError</text>
+    <rect style="fill: #ffffff" x="1030.7" y="38" width="54" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 6; stroke: #000000" x="1030.7" y="38" width="54" height="8"/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="1140" y="40" width="202.5" height="44"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1140" y="40" width="202.5" height="44"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="1241.25" y="55.2">&lt;&lt;enum&gt;&gt;</text>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="1241.25" y="76">cjsonElementType</text>
+    <rect style="fill: #ffffff" x="1140" y="84" width="202.5" height="164"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1140" y="84" width="202.5" height="164"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1143" y="97.2"> cjsonUnknown</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1143" y="113.2"> cjsonObject</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1143" y="129.2"> cjsonArray</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1143" y="145.2"> cjsonString</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1143" y="161.2"> cjsonNumber_UnsignedLong</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1143" y="177.2"> cjsonNumber_SignedLong</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1143" y="193.2"> cjsonNumber_Double</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1143" y="209.2"> cjsonTrue</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1143" y="225.2"> cjsonFalse</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1143" y="241.2"> cjsonNull</text>
+    <rect style="fill: #ffffff" x="1140" y="248" width="202.5" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1140" y="248" width="202.5" height="8"/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="-460" y="520" width="602.9" height="44"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-460" y="520" width="602.9" height="44"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="-158.55" y="535.2">&lt;&lt;struct&gt;&gt;</text>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="-158.55" y="556">cjsonNumber</text>
+    <rect style="fill: #ffffff" x="-460" y="564" width="602.9" height="52"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-460" y="564" width="602.9" height="52"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-457" y="577.2">+value.ulong: unsigned long int</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-457" y="593.2">+value.slong: signed long int</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-457" y="609.2">+value.dbl: double</text>
+    <rect style="fill: #ffffff" x="-460" y="616" width="602.9" height="180"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-460" y="616" width="602.9" height="180"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-457" y="629.2"> cjsonNumber_Create(out lpOut:struct cjsonValue**,</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-457" y="645.2">                    in lpSystem:struct cjsonSystemAPI*=NULL): enum cjsonError</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-457" y="661.2"> cjsonObject_GetAsULong(in lpValue:struct cjsonValue*): unsigned long int</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-457" y="677.2"> cjsonObject_GetAsSLong(in lpValue:struct cjsonValue*): signed long int</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-457" y="693.2"> cjsonObject_GetAsDouble(in lpValue:struct cjsonValue*): double</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-457" y="709.2"> cjsonNumber_SetULong(in lpValue:struct cjsonValue*,</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-457" y="725.2">                      in value:unsigned long int): enum cjsonError</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-457" y="741.2"> cjsonNumber_SetSLong(in lpValue:struct cjsonValue*,</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-457" y="757.2">                      in value:signed long int): enum cjsonError</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-457" y="773.2"> cjsonNumber_SetDouble(in lpValue:struct cjsonValue*,</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-457" y="789.2">                       in value:double): enum cjsonError</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="160" y="520" width="602.9" height="44"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="160" y="520" width="602.9" height="44"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="461.45" y="535.2">&lt;&lt;struct&gt;&gt;</text>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="461.45" y="556">cjsonString</text>
+    <rect style="fill: #ffffff" x="160" y="564" width="602.9" height="36"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="160" y="564" width="602.9" height="36"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="163" y="577.2">+dwStrlen: unsigned long int</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="163" y="593.2">+bData: char[]</text>
+    <rect style="fill: #ffffff" x="160" y="600" width="602.9" height="100"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="160" y="600" width="602.9" height="100"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="163" y="613.2"> cjsonString_Create(out lpStringOut:struct cjsonValue**,</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="163" y="629.2">                    in lpData:const char*,</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="163" y="645.2">                    in dwDataLength:unsigned long int,</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="163" y="661.2">                    in lpSystem:struct cjsonSystemAPI*=NULL): enum cjsonError</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="163" y="677.2"> cjsonString_Get(in lpValue:struct cjsonValue*): char*</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="163" y="693.2">+cjsonString_Strlen(in lpValue:struct cjsonValue*): unsigned long int</text>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 8; stroke: #000000" points="1085.71,226 1108.35,226 1108.35,148 1132.29,148 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="1119.64,153 1135.64,148 1119.64,143 "/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="780" y="520" width="595.2" height="44"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="780" y="520" width="595.2" height="44"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="1077.6" y="535.2">&lt;&lt;struct&gt;&gt;</text>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="1077.6" y="556">cjsonArray</text>
+    <rect style="fill: #ffffff" x="780" y="564" width="595.2" height="68"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="780" y="564" width="595.2" height="68"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="783" y="577.2">-dwPageSize: unsigned long int</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="783" y="593.2">-dwElementCount: unsigned long int</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="783" y="609.2">-pageList.lpFirstPage: struct cjsonArray_Page*</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="783" y="625.2">-pageList.lpLastPage: struct cjsonArray_Page*</text>
+    <rect style="fill: #ffffff" x="780" y="632" width="595.2" height="228"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="780" y="632" width="595.2" height="228"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="783" y="645.2"> cjsonArray_Create(out lpArrayOut:struct cjsonValue**,</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="783" y="661.2">                   in lpSystem:struct cjsonSystemAPI*=NULL): enum cjsonError</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="783" y="677.2"> cjsonArray_Length(in lpArray:const struct cjsonValue*): unsigned long int</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="783" y="693.2"> cjsonArray_Get(in lpArray:const struct cjsonValue*,</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="783" y="709.2">                in idx:unsigned long int,</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="783" y="725.2">                out lpOut:struct cjsonValue**): enum cjsonError</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="783" y="741.2"> cjsonArray_Set(in lpArray:struct cjsonValue*,</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="783" y="757.2">                in idx:unsigned long int,</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="783" y="773.2">                in lpIn:struct cjsonValue*): enum cjsonError</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="783" y="789.2"> cjsonArray_Push(in lpArray:struct cjsonValue*,</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="783" y="805.2">                 in lpValue:struct cjsonValue*): enum cjsonError</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="783" y="821.2"> cjsonArray_Iterate(in lpArray:struct cjsonValue*,</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="783" y="837.2">                    in callback:cjsonArray_Iterate_Callback,</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="783" y="853.2">                    in lpFreeParam:void*): enum cjsonError</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="1400" y="520" width="602.9" height="44"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1400" y="520" width="602.9" height="44"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="1701.45" y="535.2">&lt;&lt;struct&gt;&gt;</text>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="1701.45" y="556">cjsonObject</text>
+    <rect style="fill: #ffffff" x="1400" y="564" width="602.9" height="68"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1400" y="564" width="602.9" height="68"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1403" y="577.2">-dwElementCount: unsigned long int</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1403" y="593.2">-dwBucketCount: unsigned long int</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1403" y="609.2">-dwBucketShiftBytes: unsigned long int</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1403" y="625.2">-buckets: struct cjsonObject_BucketEntry*[]</text>
+    <rect style="fill: #ffffff" x="1400" y="632" width="602.9" height="276"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1400" y="632" width="602.9" height="276"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1403" y="645.2"> cjsonObject_Create(out lpOut:struct cjsonValue**,</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1403" y="661.2">                    in lpSystem:struct cjsonSystemAPI*=NULL): enum cjsonError</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1403" y="677.2"> cjsonObject_Set(in lpObject:struct cjsonValue*,</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1403" y="693.2">                 in lpKey:const char*,in dwKeyLength:unsigned long int,</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1403" y="709.2">                 in lpValue:struct cjsonValue*): enum cjsonError</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1403" y="725.2"> cjsonObject_Get(in lpObject:struct cjsonValue*,</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1403" y="741.2">                 in lpKey:const char*,in dwKeyLength:unsigned long int,</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1403" y="757.2">                 in lpValue:struct cjsonValue*): enum cjsonError</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1403" y="773.2"> cjsonObject_Get(in lpObject:const struct cjsonValue*,</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1403" y="789.2">                 in lpKey:const char*,in dwKeyLength:unsigned long int,</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1403" y="805.2">                 out lpValueOut:struct cjsonValue**)</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1403" y="821.2"> cjsonObject_HasKey(in lpObject:const struct cjsonValue*,</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1403" y="837.2">                    in lpKey:const char*,</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1403" y="853.2">                    in dwKeyLength:unsigned long int): enum cjsonError</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1403" y="869.2"> cjsonObject_Iterate(in lpObject:const struct cjsonValue* lpObject,</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1403" y="885.2">                     in callback:cjsonObject_Iterate_Callback,</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1403" y="901.2">                     in callbackFreeParam:void*): enum cjsonError</text>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="798.35,430.236 798.35,473.496 -158.55,473.496 -158.55,518.992 "/>
+    <polygon style="fill: #ffffff" points="806.35,430.236 798.35,414.236 790.35,430.236 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="806.35,430.236 798.35,414.236 790.35,430.236 "/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="798.35,430.236 798.35,473.497 461.45,473.497 461.45,518.994 "/>
+    <polygon style="fill: #ffffff" points="806.35,430.236 798.35,414.236 790.35,430.236 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="806.35,430.236 798.35,414.236 790.35,430.236 "/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="798.35,430.236 798.35,473.497 1077.6,473.497 1077.6,518.995 "/>
+    <polygon style="fill: #ffffff" points="806.35,430.236 798.35,414.236 790.35,430.236 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="806.35,430.236 798.35,414.236 790.35,430.236 "/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="798.35,430.236 798.35,473.497 1701.45,473.497 1701.45,518.994 "/>
+    <polygon style="fill: #ffffff" points="806.35,430.236 798.35,414.236 790.35,430.236 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="806.35,430.236 798.35,414.236 790.35,430.236 "/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 8; stroke: #000000" points="518.991,226 483.9,226 483.9,92 447.514,92 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="460.161,87 444.161,92 460.161,97 "/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="-40" y="-340" width="741.5" height="44"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-40" y="-340" width="741.5" height="44"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="330.75" y="-324.8">&lt;&lt;struct&gt;&gt;</text>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="330.75" y="-304">cjsonParser</text>
+    <rect style="fill: #ffffff" x="-40" y="-296" width="741.5" height="36"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-40" y="-296" width="741.5" height="36"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-37" y="-282.8"> CJSON_PARSER_FLAG__STREAMINGMODE: uint32_t = 0x00000001</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-37" y="-266.8"> CJSON_PARSER_FLAG__ALLOWDUPLICATEKEYS: uint32_t = 0x00000002</text>
+    <rect style="fill: #ffffff" x="-40" y="-260" width="741.5" height="116"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-40" y="-260" width="741.5" height="116"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-37" y="-246.8"> cjsonParserCreate(out lpOut:struct cjsonParser**,</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-37" y="-230.8">                   in dwFlags:uint32_t,in callbackDocumentRead:lpfnCJSONCallback_DocumentReady,</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-37" y="-214.8">                   in callbackDocumentReadyFreeParam:void*,</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-37" y="-198.8">                   in lpSystem:struct cjsonSystemAPI*=NULL): enum cjsonError</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-37" y="-182.8"> cjsonParserProcessByte(in lpParser:struct cjsonParser*,</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-37" y="-166.8">                        in byte:char): enum cjsonError</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-37" y="-150.8"> cjsonParserRelease(in lpParser:struct cjsonParser*): enum cjsonError</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="780" y="-340" width="649.1" height="44"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="780" y="-340" width="649.1" height="44"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="1104.55" y="-324.8">&lt;&lt;struct&gt;&gt;</text>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="1104.55" y="-304">cjsonSerializer</text>
+    <rect style="fill: #ffffff" x="780" y="-296" width="649.1" height="20"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="780" y="-296" width="649.1" height="20"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="783" y="-282.8"> CJSON_SERIALIZER__FLAG__PRETTYPRINT: uint32_t = 0x00000001</text>
+    <rect style="fill: #ffffff" x="780" y="-276" width="649.1" height="148"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="780" y="-276" width="649.1" height="148"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="783" y="-262.8"> cjsonSerializer_Create(out lpOut:struct cjsonSerializer**,</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="783" y="-246.8">                        in callback:cjsonSerializer_Callback_WriteBytes,</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="783" y="-230.8">                        in callbackFreeParam:void*,</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="783" y="-214.8">                        in dwFlags:uint32_t,</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="783" y="-198.8">                        in lpSystem:struct cjsonSystemAPI*): enum cjsonError</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="783" y="-182.8"> cjsonSerializer_Serialize(in lpSerializer:struct cjsonSerializer*,</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="783" y="-166.8">                           in lpValue:struct cjsonValue*): enum cjsonError</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="783" y="-150.8"> cjsonSerializer_Continue(in lpSerializer:struct cjsonSerializer*): enum cjsonError</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="783" y="-134.8"> cjsonSerializer_Release(in lpSerializer:struct cjsonSerializer*): enum cjsonError</text>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 8; stroke: #000000" points="330.75,-142.996 330.75,-60 798.35,-60 798.35,30.3155 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="793.35,17.6681 798.35,33.6681 803.35,17.6681 "/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 8; stroke: #000000" points="1104.55,-127.013 1104.55,-60 798.35,-60 798.35,30.3155 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="793.35,17.6681 798.35,33.6681 803.35,17.6681 "/>
+  </g>
+</svg>

@@ -9,7 +9,7 @@ This library has no external dependencies except the libc. Currently
 libc is used for memory management as well as snprintf to print
 unsigned long, signed long and double values.
 
-## Reading JSON input
+## Reading JSON input<a name="jsonread">
 
 To read JSON input one has to create a parser that will call a given
 callback for every decoded JSON document inside the stream. There are
@@ -62,7 +62,7 @@ for(...) { /* Iterate over input bytes */
 cjsonParserRelease(lpParser);
 ```
 
-## Writing JSON output
+## Writing JSON output<a name="jsonwrite">
 
 One can write any JSON element (`struct cjsonValue`) into an output stream
 by using the serializer. The serializer supports optional pretty-print which
@@ -114,7 +114,7 @@ e = cjsonSerializer_Release(lpSerializer);
 /* Do error handling */
 ```
 
-## Traversing an JSON tree and accessing values
+## Traversing an JSON tree and accessing values<a name="jsonaccess">
 
 To determine the type of an `struct jsonValue*` one can use the following
 macros:
@@ -138,7 +138,7 @@ void cjsonReleaseValue(
 );
 ```
 
-### Accessing ordered lists (arrays)
+### Accessing ordered lists (arrays)<a name="jsonaccessarray">
 
 Arrays are implemented internally as linked list of ordered arrays (i.e. an
 Arraylist). They can be created empty, new items can then be pushed into the
@@ -212,7 +212,7 @@ static enum cjsonError jsonArrayIterator(
 ...
 ```
 
-### Accessing key-value stores (objects)
+### Accessing key-value stores (objects)<a name="jsonaccessobject">
 
 Objects represent unordered key-value stores. They may (if the parser has
 been instructed to tolerate it) contain multiple values per key but normally
@@ -272,7 +272,7 @@ enum cjsonError cjsonObject_Iterate(
 );
 ```
 
-### Accessing numeric types
+### Accessing numeric types<a name="jsonaccessnumeric">
 
 Numeric types are stored internally either as unsigned long, signed long
 or double precission floating point value. Getting the value as a different
@@ -307,7 +307,7 @@ enum cjsonError cjsonNumber_SetDouble(
 );
 ```
 
-### Accessing strings
+### Accessing strings<a name="jsonaccessstring">
 
 ```
 enum cjsonError cjsonString_Create(
@@ -324,7 +324,7 @@ unsigned long int cjsonString_Strlen(
 );
 ```
 
-### Accessing constants
+### Accessing constants<a name="jsonaccessconst">
 
 Constants are simply the three allowed JSON constants
 `true`, `false` and `null`. The boolean constants can
@@ -350,3 +350,7 @@ enum cjsonError cjsonBoolean_Set(
     int value
 );
 ```
+
+## UML overview of the public API
+
+![UML graphics of the public API](./doc/overview.svg)
