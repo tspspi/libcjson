@@ -130,6 +130,7 @@ static enum cjsonError jsonDocumentReadyCallback(
 ) {
 	printf("\n%s:%u Received document:\n", __FILE__, __LINE__);
 	debugDumpJson(0, lpDocument);
+	cjsonReleaseValue(lpDocument);
 	return cjsonE_Ok;
 }
 

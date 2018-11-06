@@ -128,40 +128,38 @@ int main(int argc, char* argv[]) {
 	e = cjsonString_Create(&lpTestString, strTestString1, strlen(strTestString1), NULL);
 	if(e != cjsonE_Ok) { printf("%s:%u Failed to create node (code %u)\n", __FILE__, __LINE__, e); return 1; }
 	debugTestSerializer(lpTestString);
-	cjsonReleaseValue(lpTestString);
 	printf("\n\n");
 
 	printf("%s:%u Testing constant serialization:\n-------------------------------\n\n", __FILE__, __LINE__);
 	e = cjsonTrue_Create(&lpTestValue, NULL);
 	if(e != cjsonE_Ok) { printf("%s:%u Failed to create node (code %u)\n", __FILE__, __LINE__, e); return 1; }
-	debugTestSerializer(lpTestString);
-	cjsonReleaseValue(lpTestString);
+	debugTestSerializer(lpTestValue);
 	printf("\n\n");
 
 	printf("%s:%u Testing constant serialization:\n-------------------------------\n\n", __FILE__, __LINE__);
 	e = cjsonFalse_Create(&lpTestValue, NULL);
 	if(e != cjsonE_Ok) { printf("%s:%u Failed to create node (code %u)\n", __FILE__, __LINE__, e); return 1; }
-	debugTestSerializer(lpTestString);
-	cjsonReleaseValue(lpTestString);
+	debugTestSerializer(lpTestValue);
 	printf("\n\n");
 
 	printf("%s:%u Testing constant serialization:\n-------------------------------\n\n", __FILE__, __LINE__);
 	e = cjsonNull_Create(&lpTestValue, NULL);
 	if(e != cjsonE_Ok) { printf("%s:%u Failed to create node (code %u)\n", __FILE__, __LINE__, e); return 1; }
-	debugTestSerializer(lpTestString);
-	cjsonReleaseValue(lpTestString);
+	debugTestSerializer(lpTestValue);
 	printf("\n\n");
 
 	printf("%s:%u Testing array serialization:\n-------------------------------\n\n", __FILE__, __LINE__);
 	e = cjsonNull_Create(&lpTestValue, NULL);
 	if(e != cjsonE_Ok) { printf("%s:%u Failed to create node (code %u)\n", __FILE__, __LINE__, e); return 1; }
 	debugTestSerializerDeserialize(strJSONTestArraysStringsConsts);
+	cjsonReleaseValue(lpTestValue);
 	printf("\n\n");
 
 	printf("%s:%u Testing object serialization:\n-------------------------------\n\n", __FILE__, __LINE__);
 	e = cjsonNull_Create(&lpTestValue, NULL);
 	if(e != cjsonE_Ok) { printf("%s:%u Failed to create node (code %u)\n", __FILE__, __LINE__, e); return 1; }
 	debugTestSerializerDeserialize(strJSONTestArraysStringConst2);
+	cjsonReleaseValue(lpTestValue);
 	printf("\n\n");
 
 
