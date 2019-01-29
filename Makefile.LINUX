@@ -10,6 +10,6 @@ SHAREDCC=clang -Wall -shared
 MAKE=make
 CP=cp
 MKDIR=mkdir -p
-MKSTAGEARCHIVE=tar -czf packages/libstlio-amd64-linux.tar.gz -C stage .
+MKSTAGEARCHIVE=tar -czf packages/libcjson-amd64-linux.tar.gz -C stage .
 RMDIR=rm -rf
 RMFILE=rm
