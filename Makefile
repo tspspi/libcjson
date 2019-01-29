@@ -45,7 +45,29 @@ tests:
 
 	- @$(MAKE) -C ./tests
 
-.PHONY: staticlib tests
+package: staticlib
+
+	# Create staging hierarchy
+	$(MKDIR) stage/lib
+	$(MKDIR) packages
+
+	# Copy files
+	$(CP) bin/libcjson$(SLIBSUFFIX) stage/lib/$(SLIBSUFFIX)
+
+	# Create archive
+	$(MKSTAGEARCHIVE)
+
+	# Cleanup
+	$(RMDIR) stage
+
+clean:
+
+	- @$(RMDIR) stage
+	- @$(RMDIR) packages
+	- @$(RMFILE) bin/*$(SLIBSUFFIX)
+	- @$(RMFILE) bin/tests/test*
+
+.PHONY: staticlib tests clean
 
 tmp/%$(OBJSUFFIX): src/%.c $(LIBHFILES)
 

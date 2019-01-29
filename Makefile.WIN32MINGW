@@ -8,3 +8,8 @@ CCLIB=gcc -Wall -pedantic -ansi -std=c99
 ARCMD=ar rcs
 SHAREDCC=gcc -Wall -shared
 MAKE=make
+CP=copy
+MKDIR=md
+MKSTAGEARCHIVE=jar -cMf packages/libcjson-x86-win32.zip -C stage .
+RMDIR=rd /s /q
+RMFILE=del /q

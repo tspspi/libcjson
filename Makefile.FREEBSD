@@ -8,3 +8,8 @@ CCLIB=clang -fPIC -Wall -pedantic -ansi -std=c99 -lm
 ARCMD=ar rcs
 SHAREDCC=clang -Wall -shared
 MAKE=gmake
+CP=cp
+MKDIR=mkdir -p
+MKSTAGEARCHIVE=tar -czf packages/libstlio-amd64-freebsd.tar.gz -C stage .
+RMDIR=rm -rf
+RMFILE=rm
