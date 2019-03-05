@@ -663,7 +663,7 @@ static enum cjsonError cjsonParser_Number_ProcessByte(
 		case cjsonParser_StateStackElement_Number_State__Exponent:
 			if((bData >= '0') && (bData <= '9')) {
 				lpState->state = cjsonParser_StateStackElement_Number_State__Exponent;
-				lpState->dwCurrentExponent = (unsigned long int)(bData - '0');
+				lpState->dwCurrentExponent = lpState->dwCurrentExponent + (unsigned long int)(bData - '0');
 				return cjsonE_Ok;
 			}
 			e = cjsonNumber_Create(&(lpParser->lpChildResult), lpParser->lpSystem);
